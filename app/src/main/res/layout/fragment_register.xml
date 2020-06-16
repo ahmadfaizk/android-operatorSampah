@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.register.RegisterFragment"
+    android:gravity="center"
+    android:background="@color/hijau">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/ic_trash_512dp"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/app_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/logo"
+        android:text="@string/bank_sampah"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:textColor="@android:color/white"/>
+
+
+    <EditText
+        android:id="@+id/edt_full_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="12"
+        android:inputType="text"
+        android:hint="@string/nama_lengkap"
+        android:layout_marginTop="10dp"
+        android:textSize="20sp"
+        android:background="@drawable/bg_round_white"
+        android:layout_below="@+id/app_title"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:id="@+id/edt_phone_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableRight="@drawable/ice_contacts_24dp"
+        android:drawableEnd="@drawable/ice_contacts_24dp"
+        android:ems="12"
+        android:inputType="phone"
+        android:hint="@string/no_hp_telephone"
+        android:layout_marginTop="10dp"
+        android:textSize="20sp"
+        android:background="@drawable/bg_round_white"
+        android:layout_below="@+id/edt_full_name"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:id="@+id/edt_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="12"
+        android:inputType="textPassword"
+        android:hint="@string/password"
+        android:layout_marginTop="10dp"
+        android:textSize="20sp"
+        android:background="@drawable/bg_round_white"
+        android:layout_below="@+id/edt_phone_number"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:id="@+id/btn_register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="12"
+        android:background="@drawable/bg_round_green"
+        android:text="@string/daftar"
+        android:textSize="20sp"
+        android:layout_below="@+id/edt_password"
+        android:layout_marginTop="15dp"
+        android:layout_centerHorizontal="true"/>
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone"
+        android:layout_below="@id/btn_register" />
+</RelativeLayout>

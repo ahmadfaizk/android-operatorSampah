@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.banksampah.operator.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/nav_profile"
+        android:name="com.banksampah.operator.ui.profile.ProfileFragment"
+        android:label="@string/profil"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_nav_profile_to_profileUpdateFragment"
+            app:destination="@id/profileUpdateFragment" />
+        <action
+            android:id="@+id/action_nav_profile_to_changePasswordFragment"
+            app:destination="@id/changePasswordFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileUpdateFragment"
+        android:name="com.banksampah.operator.ui.profile.update.ProfileUpdateFragment"
+        android:label="Ubah Data Profil"
+        tools:layout="@layout/fragment_profile_update" >
+        <action
+            android:id="@+id/action_profileUpdateFragment_to_nav_profile"
+            app:destination="@id/nav_profile" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_register_customer"
+        android:name="com.banksampah.operator.ui.customer.register.CustomerRegisterFragment"
+        android:label="@string/notifikasi"
+        tools:layout="@layout/fragment_customer_register" />
+    <fragment
+        android:id="@+id/nav_customer"
+        android:name="com.banksampah.operator.ui.customer.CustomerFragment"
+        android:label="@string/nasabah"
+        tools:layout="@layout/fragment_customer" >
+        <action
+            android:id="@+id/action_nav_customer_to_customerHistoryFragment"
+            app:destination="@id/customerHistoryFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/customerHistoryFragment"
+        android:name="com.banksampah.operator.ui.customer.history.CustomerHistoryFragment"
+        android:label="Customer History"
+        tools:layout="@layout/fragment_customer_history"/>
+    <fragment
+        android:id="@+id/nav_complaint"
+        android:name="com.banksampah.operator.ui.complaint.ComplaintFragment"
+        android:label="@string/keluhan"
+        tools:layout="@layout/fragment_complaint" />
+    <fragment
+        android:id="@+id/changePasswordFragment"
+        android:name="com.banksampah.operator.ui.profile.password.ChangePasswordFragment"
+        android:label="Ubah Password"
+        tools:layout="@layout/fragment_change_password" >
+        <action
+            android:id="@+id/action_changePasswordFragment_to_nav_profile"
+            app:destination="@id/nav_profile" />
+    </fragment>
+
+</navigation>

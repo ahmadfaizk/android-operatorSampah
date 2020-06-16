@@ -1,0 +1,44 @@
+<resources>
+    <string name="app_name">Operator Sampah</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="bank_sampah">Bank Sampah</string>
+    <string name="nama_lengkap">Nama Lengkap</string>
+    <string name="no_hp_telephone">No.Hp/Telephone</string>
+    <string name="password">Password</string>
+    <string name="masuk">Masuk</string>
+    <string name="daftar">Daftar</string>
+    <string name="atau">ATAU</string>
+    <string name="profil">Profil</string>
+    <string name="preferense_file_key">bank_sampah_preference</string>
+    <string name="operator">Operator</string>
+    <string name="logout">Logout</string>
+    <string name="tanggal_pendaftaran">Tanggal Pendaftaran</string>
+    <string name="pendaftaran_customer">Pendaftaran Customer</string>
+    <string name="customers">Customers</string>
+    <string name="nasabah">Nasabah</string>
+    <string name="pendaftaran_nasabah">Pendaftaran Nasabah</string>
+    <string name="keluhan">Keluhan</string>
+    <string name="password_baru">Password Baru</string>
+    <string name="notifikasi">Notifikasi</string>
+
+    <string-array name="transactions_type">
+        <item>Deposit</item>
+        <item>Penarikan</item>
+        <item>History</item>
+    </string-array>
+    <string-array name="items_profile">
+        <item>Ubah Data Profil</item>
+        <item>Ubah Password</item>
+    </string-array>
+</resources>

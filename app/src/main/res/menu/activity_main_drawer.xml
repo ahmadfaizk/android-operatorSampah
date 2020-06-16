@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_dashboard_24dp"
+            android:title="@string/menu_home" />
+        <item
+            android:id="@+id/nav_profile"
+            android:icon="@drawable/ic_account_circle_24dp"
+            android:title="@string/profil" />
+        <item
+            android:id="@+id/nav_register_customer"
+            android:icon="@drawable/ic_notifications_24dp"
+            android:title="@string/notifikasi" />
+        <item
+            android:id="@+id/nav_customer"
+            android:icon="@drawable/ic_supervised_user_circle_24dp"
+            android:title="@string/nasabah" />
+        <item
+            android:id="@+id/nav_complaint"
+            android:icon="@drawable/ic_help_outline_24dp"
+            android:title="@string/keluhan" />
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@drawable/ic_exit_to_app_24dp"
+            android:title="@string/logout" />
+    </group>
+</menu>
