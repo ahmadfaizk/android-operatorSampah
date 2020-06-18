@@ -41,4 +41,8 @@
         <item>Ubah Data Profil</item>
         <item>Ubah Password</item>
     </string-array>
+    <string-array name="items_history">
+        <item>Edit Transaksi</item>
+        <item>Hapus Transaksi</item>
+    </string-array>
 </resources>

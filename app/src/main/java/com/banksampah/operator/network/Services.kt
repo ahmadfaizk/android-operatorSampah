@@ -44,7 +44,7 @@ interface Services {
     @GET("customer/all")
     fun getCustomers(@Header("Authorization") token: String): Call<MultiResponse<Customer>>
 
-    @GET("transaction/{id}")
+    @GET("transaction/history/{id}")
     fun getCustomerHistory(@Header("Authorization") token: String,
                            @Path("id") idCustomer: Int) : Call<MultiResponse<History>>
 
@@ -62,4 +62,14 @@ interface Services {
     fun withdraw(@Header("Authorization") token: String,
                 @Field("id_user") idCustomer: Int,
                 @Field("amount") amount: Long) : Call<SingleResponse<History>>
+
+    @FormUrlEncoded
+    @POST("transaction/{id}/edit")
+    fun editTransaction(@Header("Authorization") token: String,
+                        @Path("id") id: Int,
+                        @Field("amount") amount: Long): Call<SingleResponse<History>>
+
+    @GET("transaction/{id}/delete")
+    fun deleteTransaction(@Header("Authorization") token: String,
+                          @Path("id") id: Int): Call<SingleResponse<History>>
 }

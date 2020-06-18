@@ -75,6 +75,7 @@
         android:layout_height="wrap_content"
         android:ems="12"
         android:background="@drawable/bg_round_green"
+        style="@style/Widget.AppCompat.Button.Colored"
         android:text="@string/daftar"
         android:textSize="20sp"
         android:layout_below="@+id/edt_password"

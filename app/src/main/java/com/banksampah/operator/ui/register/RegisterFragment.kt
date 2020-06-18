@@ -126,11 +126,15 @@ class RegisterFragment : Fragment() {
             cursor?.moveToFirst()
             val name = cursor?.getString(cursor.getColumnIndex(ContactsContract.CommonDataKinds.Phone.DISPLAY_NAME))
             val phoneNumber = cursor?.getString(cursor.getColumnIndex(ContactsContract.CommonDataKinds.Phone.NUMBER))
-            edt_phone_number.setText(phoneNumber)
+            edt_phone_number.setText(cleanNumber(phoneNumber))
             if (edt_full_name.text.isEmpty()) {
                 edt_full_name.setText(name)
             }
         }
+    }
+
+    private fun cleanNumber(number: String?) : String? {
+        return number?.replace("-", "")?.replace(" ", "")
     }
 
     private fun showLoading(state: Boolean) {

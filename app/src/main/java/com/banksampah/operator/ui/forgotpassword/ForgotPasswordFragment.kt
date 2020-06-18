@@ -118,8 +118,12 @@ class ForgotPasswordFragment : Fragment() {
             val cursor = activity?.contentResolver?.query(uri, null, null, null, null)
             cursor?.moveToFirst()
             val phoneNumber = cursor?.getString(cursor.getColumnIndex(ContactsContract.CommonDataKinds.Phone.NUMBER))
-            edt_phone_number.setText(phoneNumber)
+            edt_phone_number.setText(cleanNumber(phoneNumber))
         }
+    }
+
+    private fun cleanNumber(number: String?) : String? {
+        return number?.replace("-", "")?.replace(" ", "")
     }
 
     private fun showLoading(state: Boolean) {
