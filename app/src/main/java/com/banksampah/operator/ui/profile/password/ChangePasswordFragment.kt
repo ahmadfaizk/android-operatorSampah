@@ -77,8 +77,10 @@ class ChangePasswordFragment : Fragment() {
     private fun showLoading(state: Boolean) {
         if (state) {
             progress_bar?.visibility = View.VISIBLE
+            container?.visibility = View.GONE
         } else {
             progress_bar?.visibility = View.GONE
+            container?.visibility = View.VISIBLE
         }
     }
 
