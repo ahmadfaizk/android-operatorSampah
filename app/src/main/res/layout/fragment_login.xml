@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -40,7 +39,8 @@
         android:textSize="20sp"
         android:background="@drawable/bg_round_white"
         android:layout_below="@+id/app_title"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:autofillHints="@string/no_hp_telephone" />
 
     <EditText
         android:id="@+id/edt_password"
@@ -53,7 +53,8 @@
         android:layout_marginTop="10dp"
         android:background="@drawable/bg_round_white"
         android:layout_below="@+id/edt_phone_number"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:autofillHints="@string/password" />
 
     <Button
         android:id="@+id/btn_forgot_password"
@@ -63,7 +64,7 @@
         android:layout_alignLeft="@id/edt_password"
         android:layout_below="@id/edt_password"
         android:background="@android:color/transparent"
-        android:text="Lupa Password?"
+        android:text="@string/lupa_password"
         android:textAllCaps="false"
         android:textColor="@android:color/white" />
 
@@ -74,7 +75,7 @@
         android:background="@drawable/bg_round_green"
         style="@style/Widget.AppCompat.Button.Colored"
         android:ems="12"
-        android:text="Masuk"
+        android:text="@string/masuk"
         android:textSize="20sp"
         android:layout_below="@+id/btn_forgot_password"
         android:layout_marginTop="15dp"

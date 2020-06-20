@@ -69,11 +69,11 @@ class ComplaintFragment : Fragment() {
 
     private fun showLoading(state: Boolean) {
         if (state) {
-            progress_bar.visibility = View.VISIBLE
-            rv_complaint.visibility = View.GONE
+            progress_bar?.visibility = View.VISIBLE
+            rv_complaint?.visibility = View.GONE
         } else {
-            progress_bar.visibility = View.GONE
-            rv_complaint.visibility = View.VISIBLE
+            progress_bar?.visibility = View.GONE
+            rv_complaint?.visibility = View.VISIBLE
         }
     }
 }

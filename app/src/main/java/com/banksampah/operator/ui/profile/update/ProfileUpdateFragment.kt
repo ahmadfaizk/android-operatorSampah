@@ -66,7 +66,7 @@ class ProfileUpdateFragment : Fragment() {
         val address = edt_address.text.toString().trim()
 
         if (name.isEmpty() || phoneNumber.isEmpty() || address.isEmpty()) {
-            showMessage("Anda Belum Mengisi Semua Datanya")
+            showMessage(getString(R.string.form_empty))
             return
         }
         update(name, phoneNumber, address)
@@ -81,8 +81,7 @@ class ProfileUpdateFragment : Fragment() {
                 val error = response.body()?.error
                 if (error != null && !error) {
                     view?.findNavController()?.navigate(R.id.action_profileUpdateFragment_to_nav_profile)
-
-                    showMessage("Berhasil Mengubah Data Profil")
+                    showMessage(getString(R.string.update_profile_success))
                 } else {
                     showMessage(response.body()?.message.toString())
                 }
@@ -138,9 +137,9 @@ class ProfileUpdateFragment : Fragment() {
 
     private fun showLoading(state: Boolean) {
         if (state) {
-            progress_bar.visibility = View.VISIBLE
+            progress_bar?.visibility = View.VISIBLE
         } else {
-            progress_bar.visibility = View.GONE
+            progress_bar?.visibility = View.GONE
         }
     }
 

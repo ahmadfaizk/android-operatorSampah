@@ -35,6 +35,7 @@ class HomeFragment : Fragment() {
     }
 
     private fun requestData() {
+        showLoading(true)
         ApiClient.instances.getUser("Bearer $token").enqueue(object :
             Callback<SingleResponse<User>> {
             override fun onResponse(call: Call<SingleResponse<User>>, response: Response<SingleResponse<User>>) {
@@ -56,7 +57,7 @@ class HomeFragment : Fragment() {
     }
 
     private fun populateData(user: User) {
-        tv_welcome.text = "Selamat Datang ${user.name}"
+        tv_welcome.text = resources.getString(R.string.welcome, user.name)
     }
 
     private fun showMessage(message: String) {
@@ -65,11 +66,11 @@ class HomeFragment : Fragment() {
 
     private fun showLoading(state: Boolean) {
         if (state) {
-            progress_bar.visibility = View.VISIBLE
-            container.visibility = View.GONE
+            progress_bar?.visibility = View.VISIBLE
+            container?.visibility = View.GONE
         } else {
-            progress_bar.visibility = View.GONE
-            container.visibility = View.VISIBLE
+            progress_bar?.visibility = View.GONE
+            container?.visibility = View.VISIBLE
         }
     }
 }

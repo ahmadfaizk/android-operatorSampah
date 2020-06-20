@@ -6,7 +6,6 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.banksampah.operator.R
 import com.banksampah.operator.model.History
-import com.banksampah.operator.ui.customer.TransactionDialog
 import com.banksampah.operator.utils.RupiahFormatter
 import kotlinx.android.synthetic.main.item_customer_history.view.*
 
@@ -46,9 +45,9 @@ class CustomerHistoryAdapter : RecyclerView.Adapter<CustomerHistoryAdapter.ViewH
         fun bind(history: History) {
             with(itemView) {
                 if (history.type == "withdraw") {
-                    tv_title.text = "Melakukan Penarikan Saldo"
+                    tv_title.text = context.getString(R.string.melakukan_penarikan_saldo)
                 } else {
-                    tv_title.text = "Pickup Sampah, Saldo Ditambahkan"
+                    tv_title.text = context.getString(R.string.pickup_sampah_saldo_ditambahkan)
                 }
                 tv_amount.text = RupiahFormatter.format(history.amount.toDouble())
                 tv_date.text = history.date

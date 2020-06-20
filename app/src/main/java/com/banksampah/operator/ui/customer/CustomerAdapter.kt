@@ -44,8 +44,9 @@ class CustomerAdapter: RecyclerView.Adapter<CustomerAdapter.ViewHolder>() {
         fun bind(customer: Customer) {
             with(itemView) {
                 tv_name.text = customer.name
-                tv_phone_number.text = "No. HP : ${customer.phoneNumber}"
-                tv_saldo.text = "Saldo : ${RupiahFormatter.format(customer.balance.toString().toDouble())}"
+                tv_phone_number.text = context.resources.getString(R.string.phone_number_template, customer.phoneNumber)
+                val saldo = RupiahFormatter.format(customer.balance.toString().toDouble())
+                tv_saldo.text = context.resources.getString(R.string.saldo_template, saldo)
             }
         }
     }

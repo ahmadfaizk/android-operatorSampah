@@ -42,11 +42,11 @@ class ChangePasswordFragment : Fragment() {
         val password2 = edt_password_2.text.toString().trim()
 
         if (password.isEmpty() || password2.isEmpty()) {
-            showMessage("Anda Belum Mengisi Semua Form")
+            showMessage(getString(R.string.form_empty))
             return
         }
         if (password != password2) {
-            showMessage("Password Baru Tidak Cocok\n Silahkan Cek Kembali Password Anda")
+            showMessage(getString(R.string.new_password_not_same))
             return
         }
         sendRequest(password)
@@ -61,7 +61,7 @@ class ChangePasswordFragment : Fragment() {
                 val error = response.body()?.error
                 if (error != null && !error) {
                     view?.findNavController()?.navigate(R.id.action_changePasswordFragment_to_nav_profile)
-                    showMessage("Berhasil Mengubah Password")
+                    showMessage(getString(R.string.change_password_success))
                 } else {
                     showMessage(response.body()?.message.toString())
                 }
@@ -76,9 +76,9 @@ class ChangePasswordFragment : Fragment() {
 
     private fun showLoading(state: Boolean) {
         if (state) {
-            progress_bar.visibility = View.VISIBLE
+            progress_bar?.visibility = View.VISIBLE
         } else {
-            progress_bar.visibility = View.GONE
+            progress_bar?.visibility = View.GONE
         }
     }
 

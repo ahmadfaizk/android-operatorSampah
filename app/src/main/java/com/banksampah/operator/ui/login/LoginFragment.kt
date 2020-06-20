@@ -55,12 +55,12 @@ class LoginFragment : Fragment() {
         val password = edt_password.text.toString().trim()
 
         if (phoneNumber.isEmpty() || password.isEmpty()) {
-            showMessage("Anda Belum Mengisi Nomor Handphone atau Password")
+            showMessage(getString(R.string.phone_number_or_password_empty))
             return
         }
 
         if (!PhoneNumberValidator.validate(phoneNumber)) {
-            showMessage("Format Nomor Handphone Salah")
+            showMessage(getString(R.string.phone_number_format_invalid))
             return
         }
 
@@ -78,11 +78,12 @@ class LoginFragment : Fragment() {
                 if (error != null && !error) {
                     val token = response.body()?.data
                     TokenPreference.getInstance(requireContext()).saveToken(token?.token)
-                    showMessage("Berhasil Login")
+                    showMessage(getString(R.string.login_success))
                     view?.findNavController()?.navigate(R.id.action_loginFragment_to_mainActivity)
                     this@LoginFragment.activity?.finish()
+                } else {
+                    showMessage(response.body()?.message.toString())
                 }
-                showMessage(response.body()?.message.toString())
             }
 
             override fun onFailure(call: Call<SingleResponse<Token>>, t: Throwable) {
@@ -135,9 +136,9 @@ class LoginFragment : Fragment() {
 
     private fun showLoading(state: Boolean) {
         if (state)
-            progress_bar.visibility = View.VISIBLE
+            progress_bar?.visibility = View.VISIBLE
         else
-            progress_bar.visibility = View.GONE
+            progress_bar?.visibility = View.GONE
     }
 
     private fun showMessage(message: String) {

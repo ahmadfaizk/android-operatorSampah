@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".ui.register.RegisterFragment"
     android:gravity="center"
-    android:background="@color/hijau">
+    android:background="@color/colorPrimary">
 
     <ImageView
         android:id="@+id/logo"
@@ -39,7 +39,8 @@
         android:textSize="20sp"
         android:background="@drawable/bg_round_white"
         android:layout_below="@+id/app_title"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:autofillHints="@string/nama_lengkap" />
 
     <EditText
         android:id="@+id/edt_phone_number"
@@ -54,7 +55,8 @@
         android:textSize="20sp"
         android:background="@drawable/bg_round_white"
         android:layout_below="@+id/edt_full_name"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:autofillHints="@string/no_hp_telephone" />
 
     <EditText
         android:id="@+id/edt_password"
@@ -67,7 +69,8 @@
         android:textSize="20sp"
         android:background="@drawable/bg_round_white"
         android:layout_below="@+id/edt_phone_number"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:autofillHints="@string/password" />
 
     <Button
         android:id="@+id/btn_register"

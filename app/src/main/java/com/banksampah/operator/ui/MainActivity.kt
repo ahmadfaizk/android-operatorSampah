@@ -2,17 +2,16 @@ package com.banksampah.operator.ui
 
 import android.content.Intent
 import android.os.Bundle
-import android.view.Menu
 import androidx.appcompat.app.AlertDialog
-import com.google.android.material.navigation.NavigationView
-import androidx.navigation.findNavController
-import androidx.drawerlayout.widget.DrawerLayout
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.core.view.GravityCompat
+import androidx.drawerlayout.widget.DrawerLayout
+import androidx.navigation.findNavController
 import androidx.navigation.ui.*
 import com.banksampah.operator.R
 import com.banksampah.operator.utils.TokenPreference
+import com.google.android.material.navigation.NavigationView
 
 class MainActivity : AppCompatActivity() {
 
@@ -53,16 +52,14 @@ class MainActivity : AppCompatActivity() {
         return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
     }
 
-    private fun showLogoutDialog() {
-        AlertDialog.Builder(this)
-            .setTitle("Apakah anda yakin akan keluar dari aplikasi ini?")
-            .setPositiveButton("Ya"
-            ) { _, _ -> logout() }
-            .setNegativeButton("Tidak"
-            ) { dialog, _ -> dialog.dismiss() }
-            .create()
-            .show()
-    }
+    private fun showLogoutDialog() = AlertDialog.Builder(this)
+        .setTitle(getString(R.string.logout_message))
+        .setPositiveButton(getString(R.string.yes)
+        ) { _, _ -> logout() }
+        .setNegativeButton(getString(R.string.no)
+        ) { dialog, _ -> dialog.dismiss() }
+        .create()
+        .show()
 
     private fun logout() {
         TokenPreference.getInstance(this).removeToken()

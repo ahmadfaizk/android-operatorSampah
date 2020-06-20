@@ -29,7 +29,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="10dp"
-                android:text="Ubah Data Profil"
+                android:text="@string/ubah_data_profil"
                 android:layout_marginBottom="16dp"
                 android:textSize="21sp"
                 android:textStyle="bold"
@@ -40,7 +40,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="text"
-                android:hint="Nama Lengkap"
+                android:hint="@string/nama_lengkap"
+                android:autofillHints="@string/nama_lengkap"
                 android:layout_marginTop="10dp"
                 android:textSize="20sp"
                 android:background="@drawable/bg_round_white" />
@@ -52,7 +53,8 @@
                 android:drawableEnd="@drawable/ice_contacts_24dp"
                 android:drawableRight="@drawable/ice_contacts_24dp"
                 android:inputType="phone"
-                android:hint="No.Hp/Telephone"
+                android:hint="@string/no_hp_telephone"
+                android:autofillHints="@string/no_hp_telephone"
                 android:layout_marginTop="10dp"
                 android:textSize="20sp"
                 android:background="@drawable/bg_round_white" />
@@ -62,17 +64,22 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="text"
-                android:hint="Alamat"
+                android:hint="@string/alamat"
+                android:autofillHints="@string/alamat"
                 android:layout_marginTop="10dp"
                 android:textSize="20sp"
                 android:background="@drawable/bg_round_white" />
 
             <Button
                 android:id="@+id/btn_update"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:paddingRight="40dp"
+                android:paddingLeft="40dp"
+                android:layout_marginBottom="16dp"
                 android:background="@drawable/bg_round_green"
-                android:text="Ubah"
+                android:text="@string/ubah"
+                style="@style/Widget.AppCompat.Button.Colored"
                 android:textSize="20sp"
                 android:layout_marginTop="24dp" />
         </LinearLayout>

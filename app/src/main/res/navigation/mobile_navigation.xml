@@ -2,7 +2,6 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/mobile_navigation"
     app:startDestination="@+id/nav_home">
 
     <fragment
@@ -33,9 +32,9 @@
     </fragment>
     <fragment
         android:id="@+id/nav_register_customer"
-        android:name="com.banksampah.operator.ui.customer.register.CustomerRegisterFragment"
+        android:name="com.banksampah.operator.ui.notification.NotificationFragment"
         android:label="@string/notifikasi"
-        tools:layout="@layout/fragment_customer_register" />
+        tools:layout="@layout/fragment_notification" />
     <fragment
         android:id="@+id/nav_customer"
         android:name="com.banksampah.operator.ui.customer.CustomerFragment"
@@ -48,7 +47,7 @@
     <fragment
         android:id="@+id/customerHistoryFragment"
         android:name="com.banksampah.operator.ui.customer.history.CustomerHistoryFragment"
-        android:label="Customer History"
+        android:label="Riwayat Transaksi Nasabah"
         tools:layout="@layout/fragment_customer_history"/>
     <fragment
         android:id="@+id/nav_complaint"

@@ -43,10 +43,10 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
                     android:layout_marginTop="10dp"
-                    android:text="Nama Lengkap"
                     android:textSize="21sp"
                     android:textStyle="bold"
-                    android:textColor="@android:color/white" />
+                    android:textColor="@android:color/white"
+                    tools:text="@string/nama_lengkap"/>
             </LinearLayout>
 
             <LinearLayout
@@ -59,45 +59,28 @@
                 android:paddingBottom="32dp"
                 android:paddingLeft="50dp"
                 android:paddingRight="50dp">
-                <LinearLayout
+                <TextView
+                    android:id="@+id/tv_phone_number"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:orientation="horizontal">
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginEnd="16dp"
-                        android:layout_marginRight="16dp"
-                        android:src="@drawable/ic_phone_24dp" />
-                    <TextView
-                        android:id="@+id/tv_phone_number"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textStyle="bold"
-                        android:text="Nomor Handphone" />
-                </LinearLayout>
-                <LinearLayout
+                    android:drawableStart="@drawable/ic_phone_24dp"
+                    android:drawableLeft="@drawable/ic_phone_24dp"
+                    android:drawablePadding="8dp"
+                    android:gravity="center_vertical"
+                    android:textStyle="bold"
+                    tools:text="@string/no_hp_telephone"/>
+                <TextView
+                    android:id="@+id/tv_address"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="25dp"
-                    android:layout_gravity="center"
-                    android:orientation="horizontal">
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginEnd="16dp"
-                        android:layout_marginRight="16dp"
-                        android:src="@drawable/ic_location_on_24dp" />
-                    <TextView
-                        android:id="@+id/tv_address"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textStyle="bold"
-                        android:text="Alamat" />
+                    android:layout_marginTop="16dp"
+                    android:drawableStart="@drawable/ic_location_on_24dp"
+                    android:drawableLeft="@drawable/ic_location_on_24dp"
+                    android:drawablePadding="8dp"
+                    android:gravity="center_vertical"
+                    android:textStyle="bold"
+                    android:text="@string/alamat" />
                 </LinearLayout>
-
-            </LinearLayout>
             <Button
                 android:id="@+id/btn_update"
                 android:layout_width="wrap_content"
@@ -105,12 +88,12 @@
                 android:layout_marginTop="10dp"
                 android:paddingRight="40dp"
                 android:paddingLeft="40dp"
+                android:layout_marginBottom="16dp"
                 android:layout_gravity="center_horizontal"
-                android:text="Ubah Data"
+                android:text="@string/ubah_data"
                 android:background="@drawable/bg_round_green"
                 style="@style/Widget.AppCompat.Button.Colored"
                 android:drawablePadding="16dp" />
-        </LinearLayout>
-    </ScrollView>
-
+            </LinearLayout>
+        </ScrollView>
 </RelativeLayout>

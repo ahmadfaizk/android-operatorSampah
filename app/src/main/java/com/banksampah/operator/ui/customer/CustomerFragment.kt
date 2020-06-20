@@ -1,13 +1,12 @@
 package com.banksampah.operator.ui.customer
 
 import android.app.AlertDialog
-import android.content.DialogInterface
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.banksampah.operator.R
@@ -18,9 +17,7 @@ import com.banksampah.operator.network.response.MultiResponse
 import com.banksampah.operator.network.response.SingleResponse
 import com.banksampah.operator.ui.customer.history.CustomerHistoryFragment
 import com.banksampah.operator.utils.TokenPreference
-import kotlinx.android.synthetic.main.fragment_customer.progress_bar
-import kotlinx.android.synthetic.main.fragment_customer.rv_customers
-import kotlinx.android.synthetic.main.fragment_customer.tv_title
+import kotlinx.android.synthetic.main.fragment_customer.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -169,11 +166,11 @@ class CustomerFragment : Fragment() {
 
     private fun showLoading(state: Boolean) {
         if (state) {
-            progress_bar.visibility = View.VISIBLE
-            rv_customers.visibility = View.GONE
+            progress_bar?.visibility = View.VISIBLE
+            container?.visibility = View.GONE
         } else {
-            progress_bar.visibility = View.GONE
-            rv_customers.visibility = View.VISIBLE
+            progress_bar?.visibility = View.GONE
+            container?.visibility = View.VISIBLE
         }
     }
 

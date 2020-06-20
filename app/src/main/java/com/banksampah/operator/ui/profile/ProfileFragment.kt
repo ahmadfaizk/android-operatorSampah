@@ -63,37 +63,35 @@ class ProfileFragment : Fragment() {
         })
     }
 
-    private fun showDialogUpdate() {
-        AlertDialog.Builder(requireContext())
-            .setTitle("Apa yang ingin anda ubah?")
-            .setItems(R.array.items_profile
-            ) { _, which ->
-                when(which) {
-                    0 -> {
-                        val bundle = Bundle()
-                        bundle.putParcelable(ProfileUpdateFragment.EXTRA_USER, user)
-                        view?.findNavController()?.navigate(R.id.action_nav_profile_to_profileUpdateFragment, bundle)
-                    }
-                    1 -> view?.findNavController()?.navigate(R.id.action_nav_profile_to_changePasswordFragment)
+    private fun showDialogUpdate() = AlertDialog.Builder(requireContext())
+        .setTitle(getString(R.string.profile_update_message))
+        .setItems(R.array.items_profile
+        ) { _, which ->
+            when(which) {
+                0 -> {
+                    val bundle = Bundle()
+                    bundle.putParcelable(ProfileUpdateFragment.EXTRA_USER, user)
+                    view?.findNavController()?.navigate(R.id.action_nav_profile_to_profileUpdateFragment, bundle)
                 }
+                1 -> view?.findNavController()?.navigate(R.id.action_nav_profile_to_changePasswordFragment)
             }
-            .create()
-            .show()
-    }
+        }
+        .create()
+        .show()
 
     private fun populateData(user: User) {
-        tv_name.text = user.name
-        tv_phone_number.text = user.phoneNumber
-        tv_address.text = user.address
+        tv_name?.text = user.name
+        tv_phone_number?.text = user.phoneNumber
+        tv_address?.text = user.address
     }
 
     private fun showLoading(state: Boolean) {
         if (state) {
-            progress_bar.visibility = View.VISIBLE
-            container.visibility = View.GONE
+            progress_bar?.visibility = View.VISIBLE
+            container?.visibility = View.GONE
         } else {
-            progress_bar.visibility = View.GONE
-            container.visibility = View.VISIBLE
+            progress_bar?.visibility = View.GONE
+            container?.visibility = View.VISIBLE
         }
     }
 

@@ -1,17 +1,7 @@
 <resources>
     <string name="app_name">Operator Sampah</string>
-    <string name="navigation_drawer_open">Open navigation drawer</string>
-    <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="nav_header_title">Android Studio</string>
-    <string name="nav_header_subtitle">android.studio@android.com</string>
-    <string name="nav_header_desc">Navigation header</string>
-    <string name="action_settings">Settings</string>
 
     <string name="menu_home">Home</string>
-    <string name="menu_gallery">Gallery</string>
-    <string name="menu_slideshow">Slideshow</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="bank_sampah">Bank Sampah</string>
     <string name="nama_lengkap">Nama Lengkap</string>
     <string name="no_hp_telephone">No.Hp/Telephone</string>
@@ -24,14 +14,50 @@
     <string name="operator">Operator</string>
     <string name="logout">Logout</string>
     <string name="tanggal_pendaftaran">Tanggal Pendaftaran</string>
-    <string name="pendaftaran_customer">Pendaftaran Customer</string>
-    <string name="customers">Customers</string>
     <string name="nasabah">Nasabah</string>
-    <string name="pendaftaran_nasabah">Pendaftaran Nasabah</string>
     <string name="keluhan">Keluhan</string>
     <string name="password_baru">Password Baru</string>
     <string name="notifikasi">Notifikasi</string>
-
+    <string name="lupa_password">Lupa Password?</string>
+    <string name="welcome">Selamat Datang %1$s</string>
+    <string name="kirim">Kirim</string>
+    <string name="alamat">Alamat</string>
+    <string name="ubah_data">Ubah Data</string>
+    <string name="ubah_data_profil">Ubah Data Profil</string>
+    <string name="melakukan_penarikan_saldo">Melakukan Penarikan Saldo</string>
+    <string name="pickup_sampah_saldo_ditambahkan">Pickup Sampah, Saldo Ditambahkan</string>
+    <string name="phone_number_template">No HP : %1$s</string>
+    <string name="saldo_template">Saldo : %1$s</string>
+    <string name="pilih_customer_untuk_melakukan_transaksi">Pilih Customer Untuk Melakukan Transaksi</string>
+    <string name="template_notification">%1$d Pemberitahuan</string>
+    <string name="sms_template_customer_forgot_password">"Password anda : %1$s\nTerimakasih."</string>
+    <string name="sms_template_customer_register">Selamat Datang %1$s di Bank Sampah Password anda : %2$s Terimakasih Telah Melakukan Pendaftaran.</string>
+    <string name="belum_ada_transaksi">Belum Ada Transaksi</string>
+    <string name="delete_transaction_message">Apakah Anda Yakin Akan Menghapus Transaksi Ini?</string>
+    <string name="select_transaction">Pilih Transaksi Anda</string>
+    <string name="tidak_ada">Tidak ada</string>
+    <string name="transaction_success_updated">Berhasil Mengubah Transaksi</string>
+    <string name="transaction_success_delete">Berhasil Menghapus Transaksi</string>
+    <string name="jumlah_transaksi_kosong">Jumlah Transaksi Kosong</string>
+    <string name="batal">Batal</string>
+    <string name="phone_number_or_password_empty">Anda Belum Mengisi Nomor Handphone atau Password</string>
+    <string name="phone_number_format_invalid">Format Nomor Handphone Salah</string>
+    <string name="new_password_not_same">Password Baru Anda Tidak Cocok. Silahkan cek kembali.</string>
+    <string name="forgot_password_success">Anda Berhasil Mengganti Password. Silahkan Login Lagi</string>
+    <string name="login_success">Berhasil Login</string>
+    <string name="form_empty">Anda Belum Mengisi Semua Form</string>
+    <string name="change_password_success">Berhasil Mengubah Password</string>
+    <string name="update_profile_success">Berhasil Mengubah Data Profil</string>
+    <string name="profile_update_message">Apa yang ingin anda ubah?</string>
+    <string name="register_success">Anda Berhasil Mendaftar</string>
+    <string name="logout_message">Apakah anda yakin akan keluar dari aplikasi ini?</string>
+    <string name="yes">Ya</string>
+    <string name="no">Tidak</string>
+    <string name="ubah">Ubah</string>
+    <string name="ubah_password">Ubah Password</string>
+    <string name="customer_forgot_password_template">%1$s Lupa Password</string>
+    <string name="customer_register_template">%1$s Mendaftar Sebagai Nasabah</string>
+    <string name="time_template">Pada : %1$s</string>
     <string-array name="transactions_type">
         <item>Deposit</item>
         <item>Penarikan</item>

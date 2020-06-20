@@ -20,11 +20,11 @@ class TransactionDialog : DialogFragment() {
             val builder = AlertDialog.Builder(it)
             val view = requireActivity().layoutInflater.inflate(R.layout.dialog_transaction, null)
             builder.setView(view)
-                .setPositiveButton("Kirim") { _, _ ->
+                .setPositiveButton(getString(R.string.kirim)) { _, _ ->
                     val amount = view.edt_amount.text.toString().trim()
                     onSendClicked?.onClick(amount)
                 }
-                .setNegativeButton("Batal") { dialog, _ ->
+                .setNegativeButton(getString(R.string.batal)) { dialog, _ ->
                     dialog.dismiss()
                 }
             builder.create()

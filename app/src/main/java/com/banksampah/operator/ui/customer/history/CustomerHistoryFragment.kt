@@ -1,13 +1,12 @@
 package com.banksampah.operator.ui.customer.history
 
 import android.app.AlertDialog
-import android.content.DialogInterface
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.banksampah.operator.R
 import com.banksampah.operator.model.History
@@ -55,7 +54,7 @@ class CustomerHistoryFragment : Fragment() {
         transactionDialog.setOnSendClicked(object : TransactionDialog.OnSendClicked {
             override fun onClick(amount: String) {
                 if (amount.isEmpty()) {
-                    showMessage("Jumlah Transaksi Kosong")
+                    showMessage(getString(R.string.jumlah_transaksi_kosong))
                 } else {
                     edit(amount.toLong())
                 }
@@ -80,6 +79,9 @@ class CustomerHistoryFragment : Fragment() {
                 if (error != null && !error) {
                     val data = response.body()?.data
                     data?.let { adapter.setData(it) }
+                    if (data != null && data.isEmpty()) {
+                        showMessage(getString(R.string.belum_ada_transaksi))
+                    }
                 } else {
                     showMessage(response.body()?.message.toString())
                 }
@@ -94,13 +96,13 @@ class CustomerHistoryFragment : Fragment() {
 
     private fun showTransactionDialog() {
         AlertDialog.Builder(context)
-            .setTitle("Pilih Transaksi Anda")
+            .setTitle(getString(R.string.select_transaction))
             .setItems(R.array.items_history
             ) { _, which ->
                 when(which) {
                     0 -> showEditDialog()
                     1 -> showDeleteDialog()
-                    else -> showMessage("Tidak ada")
+                    else -> showMessage(getString(R.string.tidak_ada))
                 }
             }
             .create()
@@ -111,16 +113,14 @@ class CustomerHistoryFragment : Fragment() {
         transactionDialog.show(childFragmentManager, "Transaksi")
     }
 
-    private fun showDeleteDialog() {
-        AlertDialog.Builder(context)
-            .setMessage("Apakah Anda Yakin Akan Menghapus Transaksi Ini?")
-            .setPositiveButton("Ya"
-            ) { _, _ -> delete() }
-            .setNegativeButton("Tidak"
-            ) { dialog, _ -> dialog?.dismiss() }
-            .create()
-            .show()
-    }
+    private fun showDeleteDialog() = AlertDialog.Builder(context)
+        .setMessage(getString(R.string.delete_transaction_message))
+        .setPositiveButton(getString(R.string.yes)
+        ) { _, _ -> delete() }
+        .setNegativeButton(getString(R.string.no)
+        ) { dialog, _ -> dialog?.dismiss() }
+        .create()
+        .show()
 
     private fun edit(amount: Long) {
         showLoading(true)
@@ -129,7 +129,7 @@ class CustomerHistoryFragment : Fragment() {
                 showLoading(false)
                 val error = response.body()?.error
                 if (error != null && !error) {
-                    showMessage("Berhasil Mengubah Transaksi")
+                    showMessage(getString(R.string.transaction_success_updated))
                     requestData(idCustomer)
                 } else {
                     showMessage(response.body()?.message.toString())
@@ -150,7 +150,7 @@ class CustomerHistoryFragment : Fragment() {
                 showLoading(false)
                 val error = response.body()?.error
                 if (error != null && !error) {
-                    showMessage("Berhasil Menghapus")
+                    showMessage(getString(R.string.transaction_success_delete))
                     requestData(idCustomer)
                 } else {
                     showMessage(response.body()?.message.toString())
@@ -170,11 +170,11 @@ class CustomerHistoryFragment : Fragment() {
 
     private fun showLoading(state: Boolean) {
         if (state) {
-            progress_bar.visibility = View.VISIBLE
-            rv_history.visibility = View.GONE
+            progress_bar?.visibility = View.VISIBLE
+            rv_history?.visibility = View.GONE
         } else {
-            progress_bar.visibility = View.GONE
-            rv_history.visibility = View.VISIBLE
+            progress_bar?.visibility = View.GONE
+            rv_history?.visibility = View.VISIBLE
         }
     }
 }
