@@ -71,4 +71,9 @@
         <item>Edit Transaksi</item>
         <item>Hapus Transaksi</item>
     </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="pendaftaran_kartu">Pendaftaran Kartu</string>
+    <string name="pendaftaran_kartu_nasabah">Pendaftaran Kartu Nasabah</string>
+    <string name="id_kartu">ID Kartu</string>
 </resources>

@@ -21,6 +21,10 @@
             android:icon="@drawable/ic_supervised_user_circle_24dp"
             android:title="@string/nasabah" />
         <item
+            android:id="@+id/nav_card"
+            android:icon="@drawable/ic_credit_card_24dp"
+            android:title="@string/pendaftaran_kartu" />
+        <item
             android:id="@+id/nav_complaint"
             android:icon="@drawable/ic_help_outline_24dp"
             android:title="@string/keluhan" />

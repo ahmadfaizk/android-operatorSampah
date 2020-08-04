@@ -63,5 +63,9 @@
             android:id="@+id/action_changePasswordFragment_to_nav_profile"
             app:destination="@id/nav_profile" />
     </fragment>
-
+    <fragment
+        android:id="@+id/nav_card"
+        android:name="com.banksampah.operator.ui.card.RegisterCardFragment"
+        android:label="Pendaftaran Kartu"
+        tools:layout="@layout/fragment_register_card" />
 </navigation>

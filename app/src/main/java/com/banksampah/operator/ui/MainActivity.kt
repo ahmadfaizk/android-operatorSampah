@@ -33,6 +33,7 @@ class MainActivity : AppCompatActivity() {
             R.id.nav_profile,
             R.id.nav_customer,
             R.id.nav_register_customer,
+            R.id.nav_card,
             R.id.nav_complaint
         ), drawerLayout)
         setupActionBarWithNavController(navController, appBarConfiguration)

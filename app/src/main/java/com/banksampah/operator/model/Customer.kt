@@ -14,4 +14,8 @@ data class Customer(
     val date: String?,
     val balance: Long?,
     val withdraw: Long?
-)
+) {
+    override fun toString(): String {
+        return name
+    }
+}

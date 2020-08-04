@@ -38,6 +38,12 @@ interface Services {
                    @Field("phone_number") phoneNumber: String,
                    @Field("address") address: String) : Call<SingleResponse<User>>
 
+    @FormUrlEncoded
+    @POST("register/card")
+    fun registerCard(@Header("Authorization") token: String,
+                     @Field("id_user") idUser: Int,
+                     @Field("id_card") idCard: String) : Call<SingleResponse<Customer>>
+
     @GET("customer/unconfirmed")
     fun getCustomersNotConfirmed(@Header("Authorization") token: String): Call<MultiResponse<Customer>>
 
